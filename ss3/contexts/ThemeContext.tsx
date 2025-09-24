@@ -43,11 +43,11 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   const colors = theme === 'dark' ? darkColors : lightColors;
 
-  const value: ThemeContextType = {
+  const value = {
     theme,
     colors,
     toggleTheme,
-  };
+  } as ThemeContextType;
 
   return (
     <ThemeContext.Provider value={value}>
